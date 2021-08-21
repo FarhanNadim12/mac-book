@@ -1,0 +1,21 @@
+td{
+    padding-right: 10px;
+}
+.button{
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    background-color: whitesmoke;
+    margin-top: 5px;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+#submitBtn{
+    background-color: red;
+    border: none;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 5px;
+}
