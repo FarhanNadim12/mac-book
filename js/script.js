@@ -15,10 +15,6 @@ assignPrice("agust25", "deliveryCost", "0");
 assignPrice("agust21", "deliveryCost", "20");
 //
 
-//converting base price in number
-const basePrice = document.getElementById("base-price");
-const basePriceNumber = parseInt(basePrice);
-//
 
 //calculating total price
 function totalPrice() {
@@ -31,9 +27,10 @@ function totalPrice() {
     const deliveryCost = document.getElementById("deliveryCost").innerText;
     const deliveryCostNumber = parseInt(deliveryCost);
     const totalCost = basePriceNumber + memoryCostNumber + deliveryCostNumber + storageCostNumber;
+
     document.getElementById("totalCost").innerText = totalCost;
     document.getElementById("finalPrice").innerText = totalCost;
-
+    return totalCost;
 }
 //
 
@@ -41,7 +38,7 @@ function totalPrice() {
 function usePromo() {
     const promoCode = document.getElementById("promoCode").value;
     if (promoCode == "stevekaku") {
-        const totalCost = parseInt(document.getElementById("totalCost").innerText);
+        const totalCost = totalPrice();
         const totalDiscount = totalCost / 100 * 20;
         const finalCost = totalCost - totalDiscount;
         document.getElementById("totalCost").innerText = finalCost;
