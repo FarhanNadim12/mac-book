@@ -41,7 +41,6 @@ function usePromo() {
         const totalCost = totalPrice();
         const totalDiscount = totalCost / 100 * 20;
         const finalCost = totalCost - totalDiscount;
-        document.getElementById("totalCost").innerText = finalCost;
         document.getElementById("finalPrice").innerText = finalCost;
     }
     document.getElementById("promoCode").value = "";
